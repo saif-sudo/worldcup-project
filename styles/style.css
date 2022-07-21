@@ -19,7 +19,7 @@ body{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     background-color: #1E1E1E;
-    height:500px;
+    min-height:500px;
     width:80%;
     border-radius: 30px;
     
@@ -40,7 +40,7 @@ body{
 .display-heading h1{
     font-weight: 700;
     color: #FFFFFF;
-    font-size: 50px;
+    font-size: 45px;
     margin: 0;
 
 
@@ -59,6 +59,11 @@ body{
     background: #DD0000;
     padding: 5px;
     border-radius: 3px;
+    transition: font-size 1s;
+}
+
+.display-heading span a:hover{
+    font-size: 22px;
 }
 
 
@@ -95,8 +100,19 @@ body{
     margin: 14px;
     }
 
+    .blog-left p a{
+        text-decoration: none;
+    color: #000;
+    }
     .blog-active{
         background-color: #DD0000 !IMPORTANT;
+        
+        color: #FFF !IMPORTANT;
+
+
+    }
+    .blog-active p a{
+       
         color: #FFF !IMPORTANT;
     }
 
@@ -118,7 +134,7 @@ body{
     gap: 10px;
 
     font-size: 14px;
-    color: #bfbfbf;
+    color: #aba2a2;
     }
 
     .blog-desc{
@@ -139,6 +155,18 @@ body{
 
 .blog-one h4{
     font-size:15px;
+}
+
+.view-blog-button{
+    background-color: #DD0000 !IMPORTANT;
+    color: #FFF !IMPORTANT;
+    text-align: center;
+    display: block;
+    padding: 6px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 270px;
+    display: none;
 }
 /*blog css end*/
 
@@ -188,3 +216,147 @@ footer a:hover{
 
 
 /* footer css end */
+
+
+/***** upcoming match css **********/
+
+.match{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    height: 190px;
+    width: 260px;
+}
+
+.match img{
+    width: 80px;
+    height: 60px;
+}
+
+.flag{
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+.flag p{
+    margin: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.flag-desc{
+    text-align: center;
+}
+
+.flag-desc p{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 16px;
+    color: #878080;
+}
+
+
+/******* Responsive CSS *************/
+
+/* for Tablets */
+@media only screen and (min-width: 668px) and (max-width: 992px) {
+    .blog {
+        display: flex;
+        width: 80%;
+        gap: 25px;
+        flex-direction: column;
+    }
+
+    .display-banner{
+        height: 458px;
+    }
+    .display-heading h1{
+        font-size: 25px;
+    }
+
+    .display-heading p{
+        font-size: 14px;
+    }
+
+    .display-image img {
+        height: 450px;
+    }
+
+    .display-heading span a{
+        font-size: 10px;
+    }
+
+
+    .blog-left{
+        border-radius: 10px;
+    text-align: center;
+    height: 276px;
+    display: flex !important;
+    /* justify-content: flex-start; */
+    background-color: snow;
+    align-content: stretch;
+    flex-direction: row;
+
+    }
+
+    .blog-right{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .view-blog-button{
+        display: block;
+    }
+}
+
+/* for mobile */
+
+@media only screen and (max-width: 667px) {
+
+
+    .display-banner{
+       display:flex;
+       flex-direction:column;
+    }
+
+    .display-heading h1{
+        font-size: 30px;
+    }
+
+    .display-heading p{
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    .display-image img {
+        height: 390px;
+    }
+
+    .blog{
+        flex-direction: column;
+    }
+
+    .blog-left{
+        background-color: #fff;
+        
+
+    }
+
+    .blog-left p{
+        border: 2px solid #ddd;
+        border-radius: 10px;
+    }
+    .blog-right{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-one img {
+        width: -webkit-fill-available;
+    
+    }
+
+    .terms{
+        display: flex;
+        flex-direction: column;
+    }
+}
